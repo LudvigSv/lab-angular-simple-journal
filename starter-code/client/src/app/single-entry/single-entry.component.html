@@ -1,0 +1,9 @@
+<h1> My Entry </h1>
+<a [routerLink]="['']"> Back to journal </a>
+
+<div *ngIf="journal">
+
+  <div class="journal-info">
+    <strong> {{ journal.date}} </strong>
+    <b> {{ journal.title }}</b>
+    <p> {{ journal.content }} </p>
