@@ -5,16 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { JournalService } from './journal.service';
+import { EntryListComponent } from './entry-list/entry-list.component';
+
+// Routes
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routing';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, EntryListComponent],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [JournalService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
